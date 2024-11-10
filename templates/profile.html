@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - VR BlackBoard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="logo">
+            <h2>VR BlackBoard</h2>
+        </div>
+        <div class="nav">
+            <a href="{{ url_for('index') }}">HOME</a>
+            <a href="{{ url_for('logout') }}">LOGOUT</a>
+        </div>
+    </div>
+    
+    <!-- Profile Content -->
+    <div id="profile" class="main-content">
+        <div class="content-wrapper">
+            <div class="text-section">
+                <h1>Profile Details</h1>
+                <table>
+                    <tr>
+                        <td>Id:</td>
+                        <td>{{ user.id }}</td>
+                    </tr>
+                    <tr>
+                        <td>First Name:</td>
+                        <td>{{ user.first_name }}</td>
+                    </tr>
+                    <tr>
+                        <td>Last Name:</td>
+                        <td>{{ user.last_name }}</td>
+                    </tr>
+                    <tr>
+                        <td>Email Id:</td>
+                        <td>{{ user.email }}</td>
+                    </tr>
+                    <tr>
+                        <td>Password:</td>
+                        <td>{{ user.password }}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

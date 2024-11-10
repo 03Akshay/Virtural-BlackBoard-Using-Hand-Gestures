@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VR BlackBoard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home_page.css') }}">
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="logo">
+            <h2>VR BlackBoard</h2>
+        </div>
+        <div class="nav">
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('collection') }}">Collection</a>
+            <a href="{{ url_for('profile') }}">My Profile</a>
+        </div>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="text-section">
+            <h1>Virtual BlackBoard</h1>
+            <p>Turn Learning into a fun Adventure. Write and doodle on Screen with just your fingertips. Let's start the begin.</p>
+        </div>
+        <div class="live-drawing-section">
+            <h2>Live Drawing Python Code Execution</h2>
+            <p>To draw on the board,<br>
+               Bring your index and thumb fingers close together without any gap, then move them to create lines.<br>
+               To erase the board, press 'Ctrl + Z'.<br>
+               If you want to hide the board temporarily, press the 'Esc' key.<br>
+               Have fun expressing your creativity!
+            </p>
+            <form action="{{ url_for('run_blackboard') }}" method="GET">
+                <button type="submit">Try BlackBoard</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

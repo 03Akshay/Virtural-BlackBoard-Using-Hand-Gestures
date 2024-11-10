@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - VR BlackBoard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='register-style.css') }}"></head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="logo">
+            <h2>VR BlackBoard</h2>
+        </div>
+        <div class="nav">
+            <a href="{{ url_for('index') }}">Home</a> 
+            <a href="{{ url_for('register') }}">Register</a> 
+            <a href="{{ url_for('login') }}">Login</a>
+        </div>
+    </div>
+    
+    <!-- Registration Content -->
+    <div id="register" class="main-content">
+        <div class="content-wrapper">
+            <div class="text-section">
+                <h1>Register for VR BlackBoard</h1>
+                <p>Join us to start your smart study journey! Fill out the form below to get started.</p>
+                <form action="{{ url_for('register') }}" method="POST">                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required><br><br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required><br><br>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required><br><br>
+                    <input type="submit" value="Register">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

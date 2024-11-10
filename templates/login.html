@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - VR BlackBoard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="logo">
+            <h2>VR BlackBoard</h2>
+        </div>
+        <div class="nav">
+            <a href="{{ url_for('index') }}">HOME</a>
+            <a href="{{ url_for('register') }}">REGISTER</a>
+            <a href="{{ url_for('login') }}">LOGIN</a>
+        </div>
+    </div>
+    
+    <!-- Login Content -->
+    <div id="login" class="main-content">
+        <div class="content-wrapper">
+            <div class="text-section">
+                <h1>Login to VR BlackBoard</h1>
+                <p>Enter your credentials to access your account.</p>
+                <form action="{{ url_for('login') }}" method="POST">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required><br><br>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required><br><br>
+                    <input type="submit" value="Login"><br><br>
+                    <a href="{{ url_for('forget_password') }}">Forgot Password?</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

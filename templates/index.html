@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VR BlackBoard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="logo">
+            <h2>VR BlackBoard</h2>
+        </div>
+        <div class="nav">
+            <a href="{{ url_for('index') }}">HOME</a>
+            <a href="{{ url_for('register') }}">REGISTER</a>
+            <a href="{{ url_for('login') }}">LOGIN</a>
+        </div>
+    </div>
+    
+    <!-- Main Content -->
+    <div id="home" class="main-content">
+        <div class="content-wrapper">
+            <div class="text-section">
+                <h1>Virtual BlackBoard</h1>
+                <p>Start Your Smart Study Journey: Write and Sketch on Screen with Your Bare Hands!</p>
+                <a href="{{ url_for('register') }}" class="register-button">REGISTER NOW</a>
+            </div>
+            <div class="image-section">
+                <img src="{{ url_for('static', filename='illustration.png') }}" alt="Illustration of a computer monitor with icons" width="300">
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div id="features" class="features">
+        <h2>VR BlackBoard Features</h2>
+        <div class="feature">
+            <img src="{{ url_for('static', filename='hand-tracking-icon.png') }}" alt="Hand Tracking">
+            <h3>Hand Tracking</h3>
+            <p>The project is entirely based on hand tracking, which allows users to write on the board using their hands.</p>
+        </div>
+        <div class="feature">
+            <img src="{{ url_for('static', filename='real-time-drawing-icon.png') }}" alt="Real-Time Drawing">
+            <h3>Real-Time Drawing</h3>
+            <p>The application provides real-time drawing capabilities, ensuring that users can see their input immediately.</p>
+        </div>
+        <div class="feature">
+            <img src="{{ url_for('static', filename='fps-display-icon.png') }}" alt="FPS Display">
+            <h3>FPS Display</h3>
+            <p>Displaying the frame rate per second (FPS) helps in monitoring the performance of the application.</p>
+        </div>
+        <div class="feature">
+            <img src="{{ url_for('static', filename='saving-drawings-icon.png') }}" alt="Saving Drawings">
+            <h3>Saving Drawings</h3>
+            <p>Users can save their board writings by pressing the save button, which stores the content in a local database.</p>
+        </div>
+        <div class="feature">
+            <img src="{{ url_for('static', filename='clearing-whiteboard-icon.png') }}" alt="Clearing the Whiteboard">
+            <h3>Clearing the Whiteboard</h3>
+            <p>The whiteboard can be easily cleared by pressing the clear button, removing all the content.</p>
+        </div>
+        <div class="feature">
+            <img src="{{ url_for('static', filename='database-integration-icon.png') }}" alt="Database Integration">
+            <h3>Database Integration</h3>
+            <p>The project integrates with a database to store and manage all drawings and notes effectively.</p>
+        </div>
+    </div>
+</body>
+</html>
