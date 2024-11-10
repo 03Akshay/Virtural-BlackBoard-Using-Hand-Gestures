@@ -13,7 +13,7 @@ VR BlackBoard is a web application that allows users to write and doodle on scre
 ## Installation
 1. Clone the repository:
    ```sh
-   git clone https://github.com/03akshay/virtual_blackboard.git
+   git clone https://github.com/03Akshay/virtual_blackboard.git
 
 2. Navigate to the project directory:
    cd virtual_blackboard
